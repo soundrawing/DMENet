@@ -58,10 +58,10 @@ This repository contains the official TensorFlow implementation of the following
 
 4. Download [pretrained weights of DMENet](https://www.dropbox.com/s/04lg03ogsto1fmw/DMENet_BDCS.zip?dl=1) and unzip it as in `[LOG_ROOT]/DMENet_BDCS/checkpoint/DMENet_BDCS.npz` (`[LOG_ROOT]` is currently set to `./logs/`).
 
-5. Download [pretrained VGG19 weights](https://www.dropbox.com/s/7ah1jwrmggog4q9/vgg19.zip?dl=1) and unzip as in `pretrined/vgg19.npy` (for training only).
+5. Download [pretrained VGG19 weights](https://www.dropbox.com/s/7ah1jwrmggog4q9/vgg19.zip?dl=1) and unzip as in `pretrained/vgg19.npy` (for training only).
 
 ### Logs
-* Training and tesing logs will be saved under `[LOG_ROOT]/[mode]/`:
+* Training and testing logs will be saved under `[LOG_ROOT]/[mode]/`:
 
     ```
     ├── [LOG_ROOT]
