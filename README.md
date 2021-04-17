@@ -17,26 +17,24 @@ This repository contains the official TensorFlow implementation of the following
 
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-16.04%20&%2018.04-blue.svg?style=plastic)
 ![Python 3.6](https://img.shields.io/badge/Python-3.6.13-green.svg?style=plastic)
-![TensorFlow 1.13.1](https://img.shields.io/badge/tensorflow-1.15.0-green.svg?style=plastic)
+![TensorFlow 1.15.0](https://img.shields.io/badge/tensorflow-1.15.0-green.svg?style=plastic)
 ![TensorLayer 1.11.1](https://img.shields.io/badge/tensorlayer-1.11.1-green.svg?style=plastic)
-![CUDA 10.0.130](https://img.shields.io/badge/CUDA-10.0.130-green.svg?style=plastic)
-![CUDNN 7.6.](https://img.shields.io/badge/CUDNN-7.6.5-green.svg?style=plastic)
+![CUDA 10.0.130](https://img.shields.io/badge/CUDA-10.0%20&%2011.1-green.svg?style=plastic)
+![CUDNN 7.6.](https://img.shields.io/badge/CUDNN-7.6.5%20&%208.0.4-green.svg?style=plastic)
 
 1. Setup environment 
-    * Option 1. docker
-        * Download the docker image and run container: `docker pull codeslake/ubuntu18.04-conda:DME`.
-        * Inside container, activate `DMENet` environment (*i.e.*, `conda activate DMENet`).
+    ```bash
+    $ git clone https://github.com/codeslake/DMENet.git
+    $ cd DMENet
 
-    * Option 2. manual installation (conda should be installed)
-        ```bash
-        $ conda create --name DMENet python=3.6
-        $ conda activate DMENet
-        $ conda install cudatoolkit=10.0
-        $ conda install cudnn=7.6
-        $ pip install tensorflow-gpu==1.15
-        $ pip install tensorlayer==1.11.1
-        ```
-2. Install requirement: `pip install -r requirements.txt`
+    # for CUDA10.0
+    $ conda create -y --name DMENet python=3.6 && conda activate DMENet
+    $ sh install_CUDA10.0.sh
+
+    # for CUDA11.1 (the name of conda environment matters)
+    $ conda create -y --name DMENet_CUDA11 python=3.6 && conda activate DMENet_CUDA11
+    $ sh install_CUDA11.1.sh
+    ```
 
 3. Download and unzip [datasets](https://www.dropbox.com/s/xkx1me8dvuv3xd0/datasets.zip?dl=1) under `[DATASET_ROOT]`.
 
