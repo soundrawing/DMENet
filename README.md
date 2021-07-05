@@ -22,7 +22,7 @@ This repository contains the official TensorFlow implementation of the following
 ![CUDA 10.0.130](https://img.shields.io/badge/CUDA-10.0%20&%2011.1-green.svg?style=plastic)
 ![CUDNN 7.6.](https://img.shields.io/badge/CUDNN-7.6.5%20&%208.0.4-green.svg?style=plastic)
 
-1. Setup environment 
+1. Setup environment
     ```bash
     $ git clone https://github.com/codeslake/DMENet.git
     $ cd DMENet
@@ -36,7 +36,7 @@ This repository contains the official TensorFlow implementation of the following
     $ sh install_CUDA11.1.sh
     ```
 
-3. Download and unzip [datasets](https://www.dropbox.com/s/xkx1me8dvuv3xd0/datasets.zip?dl=1) under `[DATASET_ROOT]`.
+3. Download and unzip datasets([option 1](https://www.dropbox.com/s/xkx1me8dvuv3xd0/datasets.zip?dl=1), [option 2](https://postechackr-my.sharepoint.com/:u:/g/personal/junyonglee_postech_ac_kr/EZsNnnayLAxNnT9UcM9GD8cBK65R8yXg9vyEd0lmKe88Zw)) under `[DATASET_ROOT]`.
 
     ```
     ├── [DATASET_ROOT]
@@ -66,7 +66,7 @@ This repository contains the official TensorFlow implementation of the following
     │   ├── [mode]
     │   │   ├── checkpoint      # model checkpoint
     │   │   ├── log             # scalar/image log for tensorboard
-    │   │   ├── sample          # sample images of training 
+    │   │   ├── sample          # sample images of training
     │   │   ├── result          # resulting images of evaluation
     ```
 
@@ -104,7 +104,7 @@ This repository contains the official TensorFlow implementation of the following
         * `--mode`: The name of a model to test. The logging folder named with the `[mode]` will be created as `[LOG_ROOT]/[mode]/`. Default: `DMENet_BDCS`
         * `--test_set`: The name of a dataset to evaluate. `CUHK` | `RTF0` | `RTF1` | `RTF1_6` | `random`. Default: `CUHK`
             * The folder structure can be modified in the function [`get_eval_path(..)`](https://github.com/codeslake/DMENet/blob/master/config.py#L85-L98) in `./config.py`.
-            * `random` is for testing models with any images, which should be placed as `[DATASET_ROOT]/random/*.[jpg|png]`. 
+            * `random` is for testing models with any images, which should be placed as `[DATASET_ROOT]/random/*.[jpg|png]`.
 
 * Checkout [the evaluation code for the RTF dataset](https://github.com/codeslake/DMENet/tree/master/evaluation/RTF), and [the deconvolution code](https://github.com/codeslake/DMENet/tree/master/deconvolution).
 
@@ -159,7 +159,7 @@ All material related to our paper is available via the following links:
 | [Paper PDF](https://openaccess.thecvf.com/content_CVPR_2019/papers/Lee_Deep_Defocus_Map_Estimation_Using_Domain_Adaptation_CVPR_2019_paper.pdf) |
 | [Supplementary Files](https://www.dropbox.com/s/van0beau0npq3de/supp.zip?dl=1) |
 | [Checkpoint Files](https://www.dropbox.com/s/04lg03ogsto1fmw/DMENet_BDCS.zip?dl=1) |
-| [Datasets](https://www.dropbox.com/s/xkx1me8dvuv3xd0/datasets.zip?dl=1)|
+| Datasets([option 1](https://www.dropbox.com/s/xkx1me8dvuv3xd0/datasets.zip?dl=1), [option 2](https://postechackr-my.sharepoint.com/:u:/g/personal/junyonglee_postech_ac_kr/EZsNnnayLAxNnT9UcM9GD8cBK65R8yXg9vyEd0lmKe88Zw))|
 | [SYNDOF Generation Repo](https://github.com/codeslake/SYNDOF)|
 
 ## License
@@ -168,8 +168,8 @@ This software is being made available under the terms in the [LICENSE](LICENSE) 
 Any exemptions to these terms require a license from the Pohang University of Science and Technology.
 
 ## About Coupe Project
-Project ‘COUPE’ aims to develop software that evaluates and improves the quality of images and videos based on big visual data. To achieve the goal, we extract sharpness, color, composition features from images and develop technologies for restoring and improving by using them. In addition, personalization technology through user reference analysis is under study.  
-    
+Project ‘COUPE’ aims to develop software that evaluates and improves the quality of images and videos based on big visual data. To achieve the goal, we extract sharpness, color, composition features from images and develop technologies for restoring and improving by using them. In addition, personalization technology through user reference analysis is under study.
+
 Please checkout other Coupe repositories in our [Posgraph](https://github.com/posgraph) github organization.
 
 ### Useful Links
